@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wubshell Admin</title>
+    <meta name="description" content="Wubshell admin dashboard for viewing custom orders." />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-page">
+      <section class="admin-hero">
+        <p class="eyebrow">Wubshell admin</p>
+        <h1>Saved custom orders</h1>
+        <p>Every order submitted from the website is stored locally and listed here.</p>
+      </section>
+      <section class="admin-actions">
+        <button id="refreshOrders" class="primary-button" type="button">Refresh Orders</button>
+        <a href="/" class="secondary-button">Back to Site</a>
+      </section>
+      <section id="adminStatus" class="admin-status">Loading saved inquiries...</section>
+      <section id="ordersGrid" class="admin-orders"></section>
+    </main>
+    <script src="/admin.js"></script>
+  </body>
+  </html>
