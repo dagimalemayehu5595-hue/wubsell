@@ -24,7 +24,7 @@ function LogoMark() {
   if (!failed) {
     return React.createElement("img", {
       className: "logo-image",
-      src: "/logo.png",
+      src: "./logo.png",
       alt: "Wubshell Studio logo",
       onError: () => setFailed(true),
     });
@@ -51,7 +51,7 @@ function SiteHeader() {
     { className: "site-topbar" },
     React.createElement(
       "a",
-      { href: "/", className: "brand-lockup brand-link" },
+      { href: "./index.html", className: "brand-lockup brand-link" },
       React.createElement(LogoMark, null),
       React.createElement(
         "div",
@@ -63,9 +63,9 @@ function SiteHeader() {
     React.createElement(
       "nav",
       { className: "site-nav" },
-      React.createElement("a", { href: "/", className: "nav-link" }, "Home"),
-      React.createElement("a", { href: "/gallery", className: "nav-link" }, "Gallery"),
-      React.createElement("a", { href: "/order", className: "nav-link active" }, "Order")
+      React.createElement("a", { href: "./index.html", className: "nav-link" }, "Home"),
+      React.createElement("a", { href: "./gallery.html", className: "nav-link" }, "Gallery"),
+      React.createElement("a", { href: "./order.html", className: "nav-link active" }, "Order")
     )
   );
 }
