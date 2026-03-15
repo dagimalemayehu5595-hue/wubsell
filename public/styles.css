@@ -1298,11 +1298,23 @@ textarea {
   }
 
   .hero-visual-panel {
-    min-height: 620px;
+    min-height: 560px;
   }
 
   .admin-orders {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .shell-window .logo-image,
+  .shell-window .shell-logo {
+    width: 210px;
+    height: 210px;
+  }
+
+  .main-card h3,
+  .feature-panel h3,
+  .gallery-card h3 {
+    font-size: clamp(2rem, 5vw, 3rem);
   }
 }
 
@@ -1336,11 +1348,15 @@ textarea {
 
   .site-nav {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .nav-link {
-    flex: 1 1 0;
     text-align: center;
+    min-width: 0;
+    padding: 12px 10px;
+    font-size: 0.95rem;
   }
 
   .cta-pill {
@@ -1361,6 +1377,17 @@ textarea {
 
   .hero-copy-panel h2 {
     max-width: 100%;
+    font-size: clamp(2.45rem, 12vw, 4rem);
+    line-height: 0.98;
+  }
+
+  .hero-text,
+  .subpage-copy p:last-child,
+  .editorial-text,
+  .collection-card p,
+  .contact-card p {
+    font-size: 0.98rem;
+    line-height: 1.75;
   }
 
   .trust-row {
@@ -1368,11 +1395,15 @@ textarea {
   }
 
   .hero-visual-panel {
-    min-height: 540px;
+    min-height: auto;
+    padding: 18px;
   }
 
   .shell-window {
-    inset: 160px 18px 18px;
+    position: relative;
+    inset: auto;
+    min-height: 330px;
+    margin-top: 6px;
   }
 
   .main-card,
@@ -1385,6 +1416,108 @@ textarea {
     left: auto;
     margin-bottom: 12px;
     max-width: none;
+  }
+
+  .main-card,
+  .mini-card {
+    padding: 18px;
+  }
+
+  .main-card h3 {
+    font-size: 2.05rem;
+  }
+
+  .shell-window-ring {
+    width: min(78vw, 320px);
+    height: min(78vw, 320px);
+  }
+
+  .shell-window-glow {
+    width: min(62vw, 250px);
+    height: min(62vw, 250px);
+  }
+
+  .shell-window .logo-image,
+  .shell-window .shell-logo {
+    width: min(50vw, 190px);
+    height: min(50vw, 190px);
+  }
+
+  .section-heading {
+    margin-bottom: 20px;
+  }
+
+  .section-heading h2,
+  .showcase-left h2,
+  .contact-card h2,
+  .subpage-copy h2,
+  .final-cta-card h2 {
+    font-size: clamp(2.1rem, 11vw, 3.3rem);
+    line-height: 0.98;
+  }
+
+  .collections-section,
+  .showcase-section,
+  .gallery-section,
+  .pricing-section,
+  .testimonial-section,
+  .contact-section {
+    padding: 62px 0 8px;
+  }
+
+  .editorial-gallery {
+    gap: 18px;
+  }
+
+  .editorial-copy {
+    padding: 22px;
+    border-radius: 26px;
+  }
+
+  .editorial-copy h3 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .editorial-images,
+  .editorial-detail-grid {
+    gap: 12px;
+  }
+
+  .editorial-main-image,
+  .editorial-detail-image {
+    border-radius: 24px;
+    min-height: 220px;
+  }
+
+  .gallery-card {
+    min-height: 280px;
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .gallery-card h3 {
+    font-size: 1.9rem;
+    padding: 8px 12px;
+    border-radius: 14px;
+  }
+
+  .gallery-card .eyebrow {
+    padding: 7px 10px;
+    letter-spacing: 0.16em;
+  }
+
+  .pricing-card,
+  .testimonial-card,
+  .contact-card {
+    padding: 24px;
+    border-radius: 26px;
+  }
+
+  .order-form input,
+  .order-form select,
+  .order-form textarea {
+    padding: 14px 15px;
+    border-radius: 16px;
   }
 
   .social-list a,
@@ -1410,9 +1543,100 @@ textarea {
     left: 14px;
     bottom: 14px;
     justify-content: center;
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .telegram-float strong {
+    font-size: 0.95rem;
+  }
+
+  .telegram-float span {
+    font-size: 0.72rem;
   }
 
   .admin-orders {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section,
+  .subpage-hero,
+  .page-block,
+  .final-cta-section,
+  .site-footer {
+    width: min(100% - 20px, 1180px);
+  }
+
+  .site-topbar {
+    padding: 6px 0 20px;
+  }
+
+  .brand-lockup {
+    gap: 12px;
+  }
+
+  .brand-copy h1 {
+    font-size: 1.45rem;
+  }
+
+  .logo-image,
+  .shell-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .hero-copy-panel,
+  .subpage-copy,
+  .collection-card,
+  .pricing-card,
+  .testimonial-card,
+  .contact-card,
+  .final-cta-card,
+  .editorial-copy {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .hero-actions {
+    gap: 10px;
+    margin: 22px 0;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+  .trust-row div {
+    padding: 12px 14px;
+  }
+
+  .main-card h3,
+  .gallery-card h3,
+  .editorial-copy h3 {
+    font-size: 1.8rem;
+  }
+
+  .social-list a,
+  .order-channel {
+    padding: 14px;
+  }
+
+  .channel-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+  }
+
+  .platform-svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .site-footer {
+    gap: 10px;
+    padding-bottom: 88px;
   }
 }
